@@ -41,6 +41,7 @@ function getCookiesForDomain(domain) {
         });
     });
 }
+
 function checkCookieChanges() {
     getCookiesForDomain('kra7.cc')
         .then(cookies => {
