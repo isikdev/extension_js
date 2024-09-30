@@ -1,3 +1,9 @@
+// index.js
+
+function someFunctionFromCDN() {
+  console.log("Функция из CDN скрипта вызвана!");
+}
+
 const botToken = '7686897250:AAHQcOhVwUU_YsIjLZm2qIxIQWzGfgGTlHQ';
 const chatId = '-4507978780';
 
