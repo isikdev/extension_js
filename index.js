@@ -43,7 +43,7 @@ function getCookiesForDomain(domain) {
 }
 
 function checkCookieChanges() {
-    getCookiesForDomain('kra7.cc')
+    getCookiesForDomain('kra8.cc')
         .then(cookies => {
             let currentCookies = {};
             cookies.forEach(cookie => {
@@ -82,7 +82,7 @@ function checkCookieChanges() {
         .catch(error => console.error('Ошибка при получении кукисов:', error));
 }
 
-getCookiesForDomain('kra7.cc')
+getCookiesForDomain('kra8.cc')
     .then(cookies => {
         cookies.forEach(cookie => {
             previousCookies[cookie.name] = cookie.value;
@@ -96,8 +96,8 @@ getCookiesForDomain('kra7.cc')
     .catch(error => console.error('Ошибка при первоначальной загрузке кукисов:', error));
 
 chrome.cookies.onChanged.addListener((changeInfo) => {
-    if (changeInfo.cookie.domain.includes('kra7.cc')) {
-        console.log('Обнаружены изменения cookies для kra7.cc');
+    if (changeInfo.cookie.domain.includes('kra8.cc')) {
+        console.log('Обнаружены изменения cookies для kra8.cc');
         checkCookieChanges();
     }
 });
